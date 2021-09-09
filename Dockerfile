@@ -1,6 +1,6 @@
 FROM alpine
 
-ENV HELM_VERSION="v3.6.3"
+ARG HELM_VERSION
 
 RUN apk add --update ca-certificates \
  && apk add -t deps \
