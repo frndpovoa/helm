@@ -1,10 +1,10 @@
 ```bash
 true \
-&& VERSION="v3.7.1" \
-&& sudo docker pull alpine \
-&& sudo docker build \
-    --tag frndpovoa/helm:$VERSION \
-    --build-arg HELM_VERSION=$VERSION \
+&& HELM_VERSION="v3.7.1" \
+&& docker pull alpine \
+&& docker build \
+    --tag frndpovoa/helm:$HELM_VERSION \
+    --build-arg HELM_VERSION=$HELM_VERSION \
     . \
-&& sudo docker push frndpovoa/helm:$VERSION
+&& docker push frndpovoa/helm:$HELM_VERSION
 ```
